@@ -1,0 +1,23 @@
+# Python environments
+venv/
+.venv/
+
+# Python and Jupyter temporary files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Generated model weights
+*.pt
+*.pth
+
+# Local editor settings
+.vscode/
+
+*.pt
+*.pth
