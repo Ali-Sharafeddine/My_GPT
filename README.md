@@ -259,6 +259,30 @@ python scripts/inspect_outputs.py
 to inspect the current experiment log and generated-text file.
 
 ---
+## Experimental Results
+
+I ran several small architecture experiments to understand how model configuration affected validation loss.
+
+| Experiment | Embedding Size | Heads | Layers | Parameters | Validation Loss |
+|---|---:|---:|---:|---:|---:|
+| Baseline | 64 | 4 | 2 | 105,369 | 1.9771 |
+| Fewer Heads | 64 | 2 | 2 | 105,369 | 1.9741 |
+| More Heads | 64 | 8 | 2 | 105,369 | 1.9798 |
+| More Layers | 64 | 4 | 3 | 155,353 | 1.8845 |
+| Wider Embeddings | 128 | 4 | 2 | 407,321 | **1.4927** |
+
+The best-performing configuration in these experiments used **128-dimensional embeddings**, reducing validation loss by approximately **24.5% compared with the baseline**.
+
+These experiments are intentionally small and are meant to explore transformer behavior rather than establish benchmark performance.
+
+## Generated Text Example
+
+Example output from the trained mini-GPT model:
+
+```text
+the reader oopen a then deesu sthe w wftsn.
+tfthe rer.o ln sacsgar thdes np frrr in de thrdrin.
+```
 
 ## Saved Model
 
