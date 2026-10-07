@@ -1,23 +1,20 @@
-# Python environments
+# Virtual environments
 venv/
 .venv/
+env/
 
-# Python and Jupyter temporary files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Jupyter
 .ipynb_checkpoints/
 
-# Secrets
-.env
-.env.*
-!.env.example
-
-# Generated model weights
-*.pt
-*.pth
-
-# Local editor settings
+# OS / editor
+.DS_Store
+Thumbs.db
 .vscode/
 
-*.pt
-*.pth
+# Large temporary outputs
+*.tmp
